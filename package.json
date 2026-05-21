@@ -1,0 +1,16 @@
+{
+  "name": "readablit",
+  "version": "1.0.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "description": "Readability support Chrome extension for Japanese web pages.",
+  "scripts": {
+    "build": "npm run typecheck && node scripts/build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.42",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14"
+  }
+}

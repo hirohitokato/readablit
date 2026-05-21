@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Readablit</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1>Readablit</h1>
+        <label class="switch" aria-label="Readablit の有効切り替え">
+          <input id="enabled" name="enabled" type="checkbox" />
+          <span class="switch__slider" aria-hidden="true"></span>
+        </label>
+      </header>
+
+      <form id="settings-form" class="popup__form">
+        <fieldset id="settings-group" class="settings-group">
+          <label class="field">
+            <span>単語の間隔</span>
+            <select id="spacingPreset" name="spacingPreset">
+              <option value="off">表示しない</option>
+              <option value="small">小さめ</option>
+              <option value="medium">ふつう</option>
+              <option value="large">広め</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>行の高さ</span>
+            <select id="lineHeightPreset" name="lineHeightPreset">
+              <option value="off">変更しない</option>
+              <option value="small">やや広い</option>
+              <option value="medium">ふつう</option>
+              <option value="large">かなり広い</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>ルビの表示</span>
+            <select id="rubyPreset" name="rubyPreset">
+              <option value="off">ルビを表示しない</option>
+              <option value="small">小さめ</option>
+              <option value="medium">ふつう</option>
+              <option value="large">大きい</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <footer class="popup__footer">
+        <a
+          class="popup__repo-link"
+          href="https://github.com/hirohitokato/readablit"
+          target="_blank"
+          rel="noreferrer"
+          >hirohitokato/readablit</a
+        >
+      </footer>
+    </main>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>
